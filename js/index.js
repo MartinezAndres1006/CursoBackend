@@ -20,10 +20,10 @@ class usuario {
     }
 
     countMascotas() {
-        console.log(this.mascotas.lengh)
+        console.log(this.mascotas.length)
     }
     getBookName() {
-         this.libros.map(object =>{console.log("los titulos leidos son"+object.titulo);});
+         this.libros.map(object =>{console.log("los titulos leidos son "+object.titulo);});
     }
 
 }
