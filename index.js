@@ -22,9 +22,9 @@ let tiendita= contenedor.createFile("./products.txt")
 const archivoDeTienda = contenedor.createFile(file);
 tiendita ? guardarproductos(): console.log('No se pudo guardar productos');
 tiendita ? obtenerProductos() : console.log('No se pudo leer productos');
-const productExist = archivoDeTienda? obtenerporId(1) :console.log("No hay nada");
-productExist? eliminarPorid(1) :console.log("No hay nada");
-// termina();
+const productFound = archivoDeTienda ? obtenerporId(1) : null;
+productFound ? eliminarPorid(1) : null;
+termina();
 
 function guardarproductos(){
     productosLista.map(product=>{contenedor.save(product,file)})
@@ -48,9 +48,9 @@ function eliminarPorid(id){
         console.log(clear)
 }
 
-// function termina(){
-// contenedor.deleteAll(file)
-// console.log("Sigue corriendo...")
-// }
+function termina(){
+contenedor.deleteAll(file)
+console.log("Sigue corriendo...")
+}
 }
 test()
