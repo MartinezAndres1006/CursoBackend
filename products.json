@@ -1,0 +1,15 @@
+[{
+    "nombre":"casio",
+    "modelo":"fx-95",
+    "id":"1"
+},
+{
+    "nombre":"samsung",
+    "modelo":"a20",
+    "id":"2"
+},
+{
+"nombre":"Procesador",
+"modelo":"Intel core i5",
+"id":"2"
+}]
