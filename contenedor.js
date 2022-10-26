@@ -56,23 +56,24 @@ class Contenedor{
     getById(id,productos){
         let Allproducts= this.read(productos)
         let producto=Allproducts.find((producto)=>producto.id==id)
-        return producto?producto:console.log("Nada");
+        return producto
       }
-      deleteAll(file) {
-        let allProductsArray = [];
-        let allProductsString = JSON.stringify(allProductsArray);
-        try {
-          fs.writeFileSync(file, allProductsString);
-        } catch (err) {
-          console.log("No existe tal archivo", err);
-        }
-      }
-    
-    deleteById(id,productos){
+    deleteAll(file){
+      let Allproducts= this.read(file)
+          if(Allproducts>=0){
+            try{
+              fs.unlinksync(Allproducts)
+            }catch(error){
+              console.log("No se pudo eliminar el archivo deseado",error)}
+          }else{
+            console.log("No existe ningun archivo")
+          }
+    }
+    deleteById(id){
       let Allproducts= this.read(productos)
       let producto=Allproducts.find((producto)=>producto.id==id)
           if(producto>=0){
-            producto.splice(producto,1)
+            producto.splice(producto,3)
           }
       let parseo = JSON.stringify(allProductsArray);
       try{
