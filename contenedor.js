@@ -69,13 +69,13 @@ class Contenedor{
             console.log("No existe ningun archivo")
           }
     }
-    deleteById(id){
+    deleteById(id,productos){
       let Allproducts= this.read(productos)
       let producto=Allproducts.find((producto)=>producto.id==id)
           if(producto>=0){
             producto.splice(producto,3)
           }
-      let parseo = JSON.stringify(allProductsArray);
+      let parseo = JSON.stringify(Allproducts);
       try{
         fs.writeFileSync(productos,parseo)
       }catch(error){
