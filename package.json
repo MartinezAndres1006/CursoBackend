@@ -1,20 +1,24 @@
 {
   "name": "programacionbackend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MartinezAndres1006/CursoBackend.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andres Martinez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MartinezAndres1006/CursoBackend/issues"
   },
-  "homepage": "https://github.com/MartinezAndres1006/CursoBackend#readme"
+  "homepage": "https://github.com/MartinezAndres1006/CursoBackend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "description": ""
 }
